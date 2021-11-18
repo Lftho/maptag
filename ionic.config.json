@@ -1,0 +1,8 @@
+{
+  "name": "maptag",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "f884481f"
+}
