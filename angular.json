@@ -12,7 +12,7 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "www",
             "index": "src/index.html",
@@ -29,9 +29,18 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/cesium/Build/Cesium",
+                "output": "/assets/cesium"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": [
+              "node_modules/cesium/Build/Cesium/Widgets/widgets.css",
+              "src/theme/variables.scss",
+              "src/global.scss"
+            ],
             "scripts": [],
             "aot": false,
             "vendorChunk": true,
@@ -39,7 +48,10 @@
             "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "customWebpackConfig": {
+              "path": "./extra-webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -166,11 +178,22 @@
               "devServerTarget": "app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app:build:production",
+            "firebaseProject": "maptag-60a4c",
+            "firebaseHostingSite": "maptag-60a4c"
+          }
         }
       }
     }
   },
   "cli": {
+    "analytics": "05691ef5-6d7b-40d7-ba1e-b3884c09f599",
     "defaultCollection": "@ionic/angular-toolkit"
   },
   "schematics": {

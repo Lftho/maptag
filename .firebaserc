@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "maptag-60a4c": {
+      "hosting": {
+        "app": [
+          "maptag-60a4c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "maptag-60a4c"
+  }
+}
