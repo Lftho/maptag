@@ -1,6 +1,6 @@
 ## Projeto MapTag
 
-Linguagem Angular
+O projeto foi gerado em [Angular CLI](https://github.com/angular/angular-cli) na versão 8.0.6.
 
 Foi construindo um aplicativo móvel para tirar fotos, marcando-as com a localização atual e exibindo-as em um mapa 3D. Inicialmente, criamos um novo aplicativo móvel usando a estrutura Ionic. Construímos o aplicativo localmente e, em seguida, integramos o Capacitor para interagir com a câmera e o dispositivo GPS. A câmera foi usada para tirar fotos e o GPS para marcá-las com a localização.
 
