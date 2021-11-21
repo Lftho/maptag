@@ -10,6 +10,7 @@ Mais tarde, usamos os serviços do Firebase para armazenar nossos arquivos de fo
   - Firebase (storage)
   - CesiumJS
   - Capacitor (interagir com a câmera e o dispositivo GPS)
+  - PWA
 
 
 ** Lembra para usar novamente o APP, necessário deixar o banco de dados publico. **
